@@ -5,9 +5,9 @@ function run() {
   let gesshoZandakaList = getGesshoZandakaList(yearMonth);
   let shuushiList = getShuushiList(yearMonth);
 
-  let yosokuGetsumatsuZandaka = getGetsumatsuZandaka(gesshoZandakaList, shuushiList);
+  let getsumatsuZandaka = getGetsumatsuZandaka(gesshoZandakaList, shuushiList);
 
-  // setGetsumatsuZandaka(yosokuGetsumatsuZandaka);
+  setGetsumatsuZandaka(getsumatsuZandaka);
   
 }
 
@@ -52,14 +52,13 @@ function getShuushiList(yearMonth) {
 }
 
 function getGetsumatsuZandaka(gesshoZandaka, shuushiList) {
-  let getsumatsuZandaka = [];
 
   // 初期値は月初残高
   const initData = gesshoZandaka.map(data => ({
     kouza_id: data.kouza_id,
     kingaku: data.kingaku,
   }));
-  const getshumatsuZandaka = shuushiList.reduce((result, current) => {
+  const getsumatsuZandaka = shuushiList.reduce((result, current) => {
     const element = result.find(value => value.kouza_id === current.kouza_id);
     if (element) {
       // 金額を合計に加算
@@ -74,5 +73,11 @@ function getGetsumatsuZandaka(gesshoZandaka, shuushiList) {
     return result;
   }, initData);
 
-  console.log(getshumatsuZandaka);
+  return getsumatsuZandaka;
 } 
+
+function setGetsumatsuZandaka(getsumatsuZandaka) {
+
+  console.log(getsumatsuZandaka);
+
+}
