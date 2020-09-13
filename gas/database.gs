@@ -18,7 +18,7 @@ const TABLE_SHUUSHI = {
         const ss = SpreadsheetApp.openById(SS_MONEY_MANAGER.ID);
         const sheet = ss.getSheetByName(this.name);
         const lastRow = sheet.getLastRow();
-        let rowIndex = lastRow;
+        let rowIndex = lastRow + 1;
         data.forEach(record => {
             let colIndex = 1;
             for(let i in this.col_key){
