@@ -3,9 +3,9 @@ const SS_MONEY_MANAGER = {
     ID: "1LkalUY2sakcytC-JcU_ZpSTpybct-Q6Y1fZwolAt3RI",
 }
 
-// 月初残高
+// 収支
 const TABLE_GESSHO_ZANDAKA = {
-    name: "月初残高",
+    name: "収支",
     col_key: [
         "収支ID",
         "口座ID",
@@ -18,13 +18,15 @@ const TABLE_GESSHO_ZANDAKA = {
         const ss = SpreadsheetApp.openById(SS_MONEY_MANAGER.ID);
         const sheet = ss.getSheetByName(this.name);
         const lastRow = sheet.getLastRow();
+        let rowIndex = lastRow;
         data.forEach(record => {
             let colIndex = 1;
             for(let key in record){
                 // スプレッドシートに書き込む
-                sheet.getRange(lastRow, colIndex).setValue(record[key]);
+                sheet.getRange(rowIndex, colIndex).setValue(record[key]);
                 colIndex++;
             }
+            rowIndex++;
         });
     },
 }
