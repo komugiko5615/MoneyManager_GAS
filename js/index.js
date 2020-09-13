@@ -18,6 +18,8 @@ $(function(){
 
 let renderTable = function (data) {
 
+    let element = $('#main_table');
+
     // テーブル初期化
     element.empty();
 
