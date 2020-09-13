@@ -11,7 +11,7 @@ function outputMoneyDataToSS_TEST() {
 
   TABLE_NAME_LIST.forEach(tableName => {
       // テーブルデータ取得
-      let data = getTableData(tableName);
+      let data = fetchTableData(tableName);
       let keys = getColumnName(tableName);
 
       let sheet = ss.getSheetByName("シート1");

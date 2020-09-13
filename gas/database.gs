@@ -7,7 +7,7 @@ const TABLE_NAME_LIST = [
     "予測月末残高",
 ];
 
-function getTableData(sheetName) {
+function fetchTableData(sheetName) {
     const ss = SpreadsheetApp.openById(SS_ID);
     const sheet = ss.getSheetByName(sheetName);
     // シート内の全データ取得

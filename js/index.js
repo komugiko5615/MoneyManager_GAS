@@ -3,7 +3,6 @@ $(function(){
         google.script.run
             .withSuccessHandler( data => {
                 // 取得成功
-                console.log('取得成功：' + data);
                 let tableData = JSON.parse(data);
 
                 renderTable(tableData);
@@ -13,14 +12,11 @@ $(function(){
                 // 取得失敗
                 console.log('取得失敗:' + data);
             })
-            .getMoneyData();
+            .getTableData("収支");
     });
 });
 
 let renderTable = function (data) {
-    let element = $('#main_table');
-
-    const kouzaData = data["口座マスター"];
 
     // テーブル初期化
     element.empty();
@@ -28,7 +24,7 @@ let renderTable = function (data) {
     // ヘッダ部出力
     let th = '<thead>';
     th += '<tr>';
-    for(let key in kouzaData[0] ) {
+    for(let key in data[0] ) {
         th += '<th>' + key + '</th>';
     }
     th += '</tr>';
@@ -37,7 +33,7 @@ let renderTable = function (data) {
 
     // データ部出力
     let tbody = '<tbody>';
-    kouzaData.forEach( dataRow => {
+    data.forEach( dataRow => {
         tbody += '<tr>';
         for(let key in dataRow) {
             tbody += '<td>' + dataRow[key] + '</td>';

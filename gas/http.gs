@@ -36,11 +36,19 @@ function getMoneyData() {
     let moneyData = {};
     TABLE_NAME_LIST.forEach(tableName => {
         // テーブルデータ取得
-        let data = getTableData(tableName);
+        let data = fetchTableData(tableName);
         let keys = getColumnName(tableName);
 
         moneyData[tableName] = data;
     });
 
     return JSON.stringify(moneyData);
+}
+
+function getTableData(tableName) {
+
+    // テーブルデータ取得
+    const tableData = fetchTableData(tableName);
+
+    return JSON.stringify(tableData);
 }
