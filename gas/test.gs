@@ -12,7 +12,7 @@ function test() {
         };
     }
 
-    TABLE_GESSHO_ZANDAKA.insert(data);
+    TABLE_SHUUSHI.insert(data);
 
     Logger.log(data);
 }

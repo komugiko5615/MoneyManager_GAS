@@ -40,5 +40,6 @@ function getTableData(tableName) {
 }
 
 function insertShuushi(data) {
-    TABLE_GESSHO_ZANDAKA.insert(data);
+    TABLE_SHUUSHI.insert(data);
+    Logger.log("収支データ登録");
 }

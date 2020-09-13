@@ -4,15 +4,15 @@ const SS_MONEY_MANAGER = {
 }
 
 // 収支
-const TABLE_GESSHO_ZANDAKA = {
+const TABLE_SHUUSHI = {
     name: "収支",
     col_key: [
-        "収支ID",
-        "口座ID",
-        "日付",
-        "収支名",
-        "収支分類",
-        "金額",
+        "shuushi_id",
+        "kouza_id",
+        "date",
+        "shuushi_name",
+        "shuushi_type",
+        "kingaku",
     ],
     insert: function(data) {
         const ss = SpreadsheetApp.openById(SS_MONEY_MANAGER.ID);
@@ -21,9 +21,9 @@ const TABLE_GESSHO_ZANDAKA = {
         let rowIndex = lastRow;
         data.forEach(record => {
             let colIndex = 1;
-            for(let key in record){
+            for(let i in this.col_key){
                 // スプレッドシートに書き込む
-                sheet.getRange(rowIndex, colIndex).setValue(record[key]);
+                sheet.getRange(rowIndex, colIndex).setValue(record[this.col_key[i]]);
                 colIndex++;
             }
             rowIndex++;
