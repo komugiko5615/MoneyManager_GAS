@@ -13,44 +13,30 @@
 </head>
 <body>
     <div class="container-fulid">
-
         <div class="main">
             <h1>テスト</h1>
-            <!-- <button onclick="run()">Run</button> -->
-            <form method="post" action="">
-                <div class="form-group form-date">
-                    <input type="date">
+            <form method="post" action="" class="form form-horizontal">
+                <div class="form-group">
+                    <label class="control-label col-xs-2">日付</label>
+                    <div class="col-xs-5">
+                        <input type="date" class="form-control">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="label">口座:</label>
+                    <select class="form-control">
+                        <option>test</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="label">金額:</label>
+                    <input type="number" class="form-control">
+                </div>
+                <div class="form-group form-btn">
                     <input type="submit" value="検索" class="btn btn-primary">
                 </div>
 
             </form>
-
-            <div>
-                <table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th scope="col">test</th>
-                            <th scope="col">test</th>
-                            <th scope="col">test</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>11111111</td>
-                            <td>11111111</td>
-                            <td>11111111</td>
-                        </tr>
-                        <tr>
-                            <td>11111111</td>
-                            <td>11111111</td>
-                            <td>11111111</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <div class="right">
-                <a href="add.html" class="btn btn-primary">追加</a>
-            </div>
 
         </div>
     </div>
