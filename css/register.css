@@ -1,0 +1,19 @@
+.menu-bar {
+    display: flex;
+    text-align: left;
+    margin: auto;
+    background-color: black;
+}
+.menu-item {
+    padding:15px;
+    color: blanchedalmond;
+}
+.main {
+    width:80%;
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
+.form-btn {
+    text-align: right;
+}
