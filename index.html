@@ -6,24 +6,38 @@
     <title>Document</title>
 
     <!-- style -->
-    <?!= HtmlService.createHtmlOutputFromFile('css').getContent(); ?>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <?!= HtmlService.createHtmlOutputFromFile('css_common').getContent(); ?>
     <link rel="stylesheet" href="css/index.css">
+    <?!= HtmlService.createHtmlOutputFromFile('css_index').getContent(); ?>
 
 </head>
 <body>
     <div class="container-fulid">
-
+        <div class="menu-bar">
+            <a href="" class="menu-item"><span>▼ メニュー</span></a>
+        </div>
         <div class="main">
-            <h1>テスト</h1>
-            <form>
-                <div class="form-group form-date">
-                    <input type="date">
-                    <input type="button" id="search" value="検索" class="btn btn-primary">
+            <div class="area-date">
+                <a href="" class="date-prev">＜</a>
+                <a href="" class="date-now">2020/09</a>
+                <a href="" class="date-next">＞</a>
+            </div>
+
+            <div class="area-zandaka">
+                <div class="area-zandaka-start">
+                    <div class="zandaka-label">月初残高</div>
+                    <div class="zandaka-kingaku">1000000 円</div>
                 </div>
-
-            </form>
-
+                <div class="area-zandaka-yajirushi">
+                    <span class="zandaka-yajirushi">⇒</span>
+                </div>
+                <div class="area-zandaka-end">
+                    <div class="zandaka-label">月末残高</div>
+                    <div class="zandaka-kingaku">1000000 円</div>
+                </div>
+            </div>
             <div>
                 <table id="main_table" class="table table-bordered">
                     <thead>
@@ -43,7 +57,7 @@
                 </table>
             </div>
             <div class="right">
-                <a href="https://script.google.com/macros/s/AKfycbws9RHGdQrsKIPqMEu5RJKNTGuvPgNM6t_FxYcZXALRtS3I5dzQ/exec?action=register" class="btn btn-primary">追加</a>
+                <a class="btn btn-add-shuushi" href="https://script.google.com/macros/s/AKfycbws9RHGdQrsKIPqMEu5RJKNTGuvPgNM6t_FxYcZXALRtS3I5dzQ/exec?action=register">追加</a>
             </div>
             <div class="test"></div>
         </div>

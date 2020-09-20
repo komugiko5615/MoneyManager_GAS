@@ -1,32 +1,122 @@
+.menu-bar {
+    display: flex;
+    text-align: left;
+    margin: auto;
+    background-color: black;
+}
+.menu-item {
+    padding:15px;
+    color: blanchedalmond;
+}
 .main {
-    /* text-align: center; */
     width:80%;
     max-width: 800px;
     margin: auto;
+    text-align: center;
 }
-
-.form-date {
+.area-date {
     display: flex;
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+.date-prev {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 20px 10px 0;
+}
+.date-now {
+    color: white;
+    background-color: lightseagreen;
+    font-size: 36px;
+    font-family: arial black;
+    padding: 15px;
+    border-radius: 10px;
+    text-decoration: underline;
+
+}
+.date-next {
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+    margin: auto 0px 10px 20px;
+
+}
+
+.area-zandaka {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     max-width: 300px;
-    text-align: left;
+    height: 90px;
+    padding: 15px;
+    margin: 10px auto;
+    border-radius: 10px;
+    background-color: lightgray;
+
+}
+.area-zandaka-start {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+.area-zandaka-end {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+    /* border: solid 1px #000000;
+    border-collapse: collapse; */
+}
+.area-zandaka-data {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
 }
 
-.form {
+.zandaka-label {
     width: 100%;
-    text-align: left;
-    padding: 15px;
-}
-.form-btn {
-    max-width: 600px;
-    text-align: right;
-    margin-left: auto;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: cornflowerblue;
+    font-weight: bold;
+    color: white;
 }
 
-.label {
-    margin-right: 5px;
+.zandaka-kingaku {
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
 }
+
+
+.area-zandaka-yajirushi {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.zandaka-yajirushi {
+    font-size: 32px;
+    font-weight: bold;
+}
+
 table th {
     color:white;
     background: linear-gradient(#829ebc,#225588);
@@ -37,19 +127,6 @@ table th {
 }
 
 table td:hover{
-background-color: #d4f0fd;
+    background-color: #d4f0fd;
 }
 
-.right {
- text-align: right;
-}
-
-.left {
-    text-align: left;
-}
-.center {
-    text-align: center;
-}
-.max {
-    width: 100%;
-}
