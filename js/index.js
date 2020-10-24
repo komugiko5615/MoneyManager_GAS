@@ -77,10 +77,10 @@ let fetchShuushiData = function() {
 
 let renderTable = function (data) {
 
-    let element = $('#main_table');
+    let $table = $('#main_table');
 
     // テーブル初期化
-    element.empty();
+    $table.empty();
 
     // ヘッダ部出力
     let th = '<thead>';
@@ -90,7 +90,7 @@ let renderTable = function (data) {
     }
     th += '</tr>';
     th += '</thead>';
-    element.append(th);
+    $table.append(th);
 
     // データ部出力
     let tbody = '<tbody>';
@@ -103,5 +103,5 @@ let renderTable = function (data) {
     });
     tbody += '</tbody>';
 
-    element.append(tbody);
+    $table.append(tbody);
 }
